@@ -15,6 +15,7 @@
 		9B2639CB28440F4600FCF38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2639CA28440F4600FCF38E /* Assets.xcassets */; };
 		9B2639CE28440F4600FCF38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2639CC28440F4600FCF38E /* LaunchScreen.storyboard */; };
 		9B2639D62844213800FCF38E /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2639D52844213800FCF38E /* Birthday.swift */; };
+		9B2639DC284AB14700FCF38E /* BirthdaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2639DB284AB14700FCF38E /* BirthdaysTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9B2639CD28440F4600FCF38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B2639CF28440F4600FCF38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B2639D52844213800FCF38E /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
+		9B2639DB284AB14700FCF38E /* BirthdaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9B2639CF28440F4600FCF38E /* Info.plist */,
 				9B2639C728440F4500FCF38E /* BirthdayTracker.xcdatamodeld */,
 				9B2639D52844213800FCF38E /* Birthday.swift */,
+				9B2639DB284AB14700FCF38E /* BirthdaysTableViewController.swift */,
 			);
 			path = BirthdayTracker;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2639DC284AB14700FCF38E /* BirthdaysTableViewController.swift in Sources */,
 				9B2639D62844213800FCF38E /* Birthday.swift in Sources */,
 				9B2639C328440F4500FCF38E /* AddBirthdayViewController.swift in Sources */,
 				9B2639BF28440F4500FCF38E /* AppDelegate.swift in Sources */,
