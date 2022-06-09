@@ -70,23 +70,28 @@ class BirthdaysTableViewController: UITableViewController {
     }
 
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        if birthdays.count > indexPath.row { //checking that birthdays count == rows count
+            let birthday = birthdays[indexPath.row] // object from the birtdays array is assigned to the constant
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate // giving to add delegate the access to the context of the object
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(birthday) // object is being deleted from the contexts
+            birthdays.remove(at: indexPath.row) // deleting the object from DB
+            do {
+                try context.save() // to save changes
+            } catch let error {
+                print("Cannot save because of error: \(error)")
+            }
+            tableView.deleteRows(at: [indexPath], with: .fade) // deleting the row where the object was appearing earlier
+        }
     }
-    */
 }
