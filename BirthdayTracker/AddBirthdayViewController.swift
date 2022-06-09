@@ -32,7 +32,7 @@ class AddBirthdayViewController: UIViewController {
         
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
-        let birthdayDate = birthDatePicker.date
+        let birthDate = birthDatePicker.date
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext

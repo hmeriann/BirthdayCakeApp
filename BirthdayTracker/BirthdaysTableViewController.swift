@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BirthdaysTableViewController: UITableViewController, AddBirthdayViewControllerDelegate {
     
@@ -18,6 +19,20 @@ class BirthdaysTableViewController: UITableViewController, AddBirthdayViewContro
         
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = Birthday.fetchRequest() as NSFetchRequest<Birthday>
+        do {
+            birthdays = try context.fetch(fetchRequest)
+        } catch let error {
+            print("Cannot save because of error: \(error).")
+        }
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
