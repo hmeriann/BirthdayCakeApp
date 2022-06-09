@@ -32,7 +32,7 @@ class AddBirthdayViewController: UIViewController {
         let newBirthday = Birthday(context: context)
         newBirthday.firstName = firstName
         newBirthday.lastName = lastName
-        newBirthday.birthDate as NSDate?
+        newBirthday.birthDate as Date?
         newBirthday.birthdayId = UUID().uuidString
         
         if let uniqueId = newBirthday.birthdayId {
